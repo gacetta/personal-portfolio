@@ -63,6 +63,7 @@ export function NavBar() {
         w={"100vw"}
         top={0}
         left={0}
+        zIndex={25}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>Michael Gacetta</Box>
