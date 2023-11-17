@@ -20,12 +20,16 @@ export const Hero = () => {
         position={"absolute"}
         top={0}
       >
-        <Box m={6} p={6}>
+        <Box m={4} p={4}>
           <Text fontSize={"6xl"} textTransform={"uppercase"}>
             I Am
           </Text>
-          <Text fontSize={"6xl"} textTransform={"uppercase"}>
-            Michael Gacetta
+          <Text
+            fontSize={"6xl"}
+            textTransform={"uppercase"}
+            fontWeight={"bold"}
+          >
+            a software developer
           </Text>
         </Box>
       </Flex>
