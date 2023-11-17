@@ -8,6 +8,7 @@ export const Resume = () => {
       bg={"#faa006"}
       align={"center"}
       justify={"center"}
+      id="resume"
     >
       RESUME
     </Flex>

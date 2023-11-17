@@ -8,6 +8,7 @@ export const About = () => {
       bg={"peru"}
       align={"center"}
       justify={"center"}
+      id="about"
     >
       ABOUT
     </Flex>

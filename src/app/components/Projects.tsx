@@ -8,6 +8,7 @@ export const Projects = () => {
       bg={"darkseagreen"}
       align={"center"}
       justify={"center"}
+      id="projects"
     >
       PROJECTS
     </Flex>

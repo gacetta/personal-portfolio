@@ -8,6 +8,7 @@ export const Contact = () => {
       bg={"cornflowerblue"}
       align={"center"}
       justify={"center"}
+      id="contact"
     >
       CONTACT
     </Flex>

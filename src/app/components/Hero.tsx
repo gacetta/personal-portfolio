@@ -2,7 +2,7 @@ import { Box, Container, Flex, Image, Text } from "@chakra-ui/react";
 
 export const Hero = () => {
   return (
-    <Box w={"100%"} h={"100vh"} position={"relative"} zIndex={-10}>
+    <Box w={"100%"} h={"100vh"} position={"relative"} zIndex={-10} id="hero">
       <Image
         boxSize={"100%"}
         objectFit={"cover"}
@@ -20,7 +20,7 @@ export const Hero = () => {
         position={"absolute"}
         top={0}
       >
-        <Box p={10}>
+        <Box m={6} p={6}>
           <Text fontSize={"6xl"} textTransform={"uppercase"}>
             I Am
           </Text>

@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { NavBar } from "./components/navbar";
+import { NavBar } from "./components/NavBar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Resume } from "./components/Resume";

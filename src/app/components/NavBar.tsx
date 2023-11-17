@@ -26,91 +26,111 @@ import {
   MoonIcon,
   SunIcon,
 } from "@chakra-ui/icons";
+import { Link, animateScroll } from "react-scroll";
 
 interface Props {
   children: React.ReactNode;
+  anchor?: String;
 }
 
 const NavLink = (props: Props) => {
   const { children } = props;
 
   return (
-    <Box
-      as="a"
-      px={2}
-      py={2}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
-      }}
-      href={"#"}
+    <Link
+      activeClass="active"
+      className={props.anchor}
+      to={props.anchor}
+      spy={true}
+      smooth={true}
+      duration={900}
     >
-      {children}
-    </Box>
+      <Box
+        cursor={"pointer"}
+        px={2}
+        py={2}
+        rounded={"md"}
+        _hover={{
+          textDecoration: "none",
+          bg: useColorModeValue("gray.200", "gray.700"),
+        }}
+      >
+        {children}
+      </Box>
+    </Link>
   );
 };
 
 export function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const scrollToTop = () => {
+    animateScroll.scrollToTop();
+  };
+  const scrollToBottom = () => {
+    animateScroll.scrollToBottom();
+  };
+
   return (
-    <>
-      <Box
-        bg={useColorModeValue("gray.100", "gray.900")}
-        px={4}
-        position={"fixed"}
-        w={"100vw"}
-        top={0}
-        left={0}
-        zIndex={25}
-      >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Michael Gacetta</Box>
+    <Box
+      // bg={useColorModeValue("gray.100", "gray.900")}
+      bg={"transparent"}
+      px={4}
+      pr={8}
+      position={"fixed"}
+      w={"100vw"}
+      top={0}
+      left={0}
+      zIndex={25}
+    >
+      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Box onClick={scrollToTop} cursor={"pointer"}>
+          Michael Gacetta
+        </Box>
 
-          <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={7}>
-              <NavLink>
-                <InfoIcon />
-                About
-              </NavLink>
-              <NavLink>
-                <CalendarIcon />
-                Resume
-              </NavLink>
-              <NavLink>
-                <CopyIcon />
-                Projects
-              </NavLink>
-              <NavLink>
-                <EmailIcon />
-                Contact
-              </NavLink>
-              <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
+        <Flex alignItems={"center"}>
+          <Stack direction={"row"} spacing={7}>
+            <NavLink anchor="about">
+              <InfoIcon />
+              About
+            </NavLink>
+            <NavLink anchor="resume">
+              <CalendarIcon />
+              Resume
+            </NavLink>
+            <NavLink anchor="projects">
+              <CopyIcon />
+              Projects
+            </NavLink>
+            <NavLink anchor="contact">
+              <EmailIcon />
+              Contact
+            </NavLink>
+            <Button onClick={toggleColorMode}>
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
 
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <HamburgerIcon />
-                </MenuButton>
-                <MenuList alignItems={"center"}>
-                  <MenuItem>About</MenuItem>
-                  <MenuItem>Resume</MenuItem>
-                  <MenuItem>Projects</MenuItem>
-                  <MenuItem>Contact</MenuItem>
-                </MenuList>
-              </Menu>
-            </Stack>
-          </Flex>
+            <Menu>
+              <MenuButton
+                as={Button}
+                rounded={"full"}
+                variant={"link"}
+                cursor={"pointer"}
+                minW={0}
+              >
+                <HamburgerIcon />
+              </MenuButton>
+              <MenuList alignItems={"center"}>
+                <MenuItem>About</MenuItem>
+                <MenuItem>Resume</MenuItem>
+                <MenuItem>Projects</MenuItem>
+                <MenuItem>Contact</MenuItem>
+              </MenuList>
+            </Menu>
+          </Stack>
         </Flex>
-      </Box>
-    </>
+      </Flex>
+    </Box>
   );
 }
