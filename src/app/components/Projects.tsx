@@ -1,16 +1,16 @@
 import { Flex } from "@chakra-ui/react";
+import { SectionHeader } from "./SectionHeader";
 
 export const Projects = () => {
   return (
     <Flex
+      direction={"column"}
       w={"100%"}
       h={"100vh"}
       bg={"darkseagreen"}
-      align={"center"}
-      justify={"center"}
       id="projects"
     >
-      PROJECTS
+      <SectionHeader>projects:</SectionHeader>
     </Flex>
   );
 };
