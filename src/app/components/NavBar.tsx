@@ -30,7 +30,7 @@ import { Link, animateScroll } from "react-scroll";
 
 interface Props {
   children: React.ReactNode;
-  anchor?: String;
+  anchor: string;
 }
 
 const NavLink = (props: Props) => {
@@ -107,9 +107,9 @@ export function NavBar() {
               <EmailIcon />
               Contact
             </NavLink>
-            <Button onClick={toggleColorMode}>
+            {/* <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
+            </Button> */}
 
             <Menu>
               <MenuButton
