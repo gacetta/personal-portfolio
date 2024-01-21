@@ -8,7 +8,7 @@ export const Contact = () => {
   return (
     <Flex
       w={"100%"}
-      h={"max-content"}
+      h={"92vh"}
       bg={"cornflowerblue"}
       id="contact"
       position={"relative"}
@@ -16,6 +16,7 @@ export const Contact = () => {
       p={5}
       direction={"column"}
       align={"center"}
+      justify={"center"}
     >
       {/* <Image
         boxSize={"80%"}

@@ -66,7 +66,9 @@ export const TechnologyBadge = (props: Props) => {
           />
         )}
       </Link>
-      <Text fontSize={"xl"}>{props.tech.name}</Text>
+      <Text mt={0.5} fontSize={"l"}>
+        {props.tech.name}
+      </Text>
     </Flex>
   );
 };
