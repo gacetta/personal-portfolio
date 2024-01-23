@@ -1,31 +1,10 @@
 "use client";
 import { InfoIcon } from "@chakra-ui/icons";
 import { Flex, IconButton, Link, Text, Image } from "@chakra-ui/react";
-
-export interface Technology {
-  name: string;
-  href?: string;
-  logo?: string;
-}
-
-const javascript = {
-  name: "JavaScript",
-  href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  logo: "/assets/images/technologies/javascript.png",
-};
-const typescript = {
-  name: "TypeScript",
-  href: "https://www.typescriptlang.org/",
-  logo: "/assets/images/technologies/typescript.png",
-};
-
-export const currentTechnologies = [javascript, typescript];
-export const otherTechnologies = [];
+import { Technology } from "../utils/technologies";
 
 interface Props {
   children?: React.ReactNode;
-  // name: string;
-  // href?: string;
   tech: Technology;
 }
 

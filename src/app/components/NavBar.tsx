@@ -85,7 +85,13 @@ export function NavBar() {
       zIndex={25}
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-        <Box onClick={scrollToTop} cursor={"pointer"}>
+        <Box
+          onClick={scrollToTop}
+          cursor={"pointer"}
+          fontWeight={"bold"}
+          fontSize={"xl"}
+          textTransform={"uppercase"}
+        >
           Michael Gacetta
         </Box>
 

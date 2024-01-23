@@ -1,9 +1,7 @@
+"use client";
 import { Box, Flex, Text } from "@chakra-ui/react";
-
-interface Technology {
-  name: string;
-  icon: string;
-}
+import { Technology } from "../utils/technologies";
+import { TechnologyBadge } from "./TechnologyBadge";
 
 interface ProjectItemData {
   title: string;
@@ -27,12 +25,12 @@ export const ProjectItem = (props: Props) => {
       <Text>Project Link: {data.link}</Text>
       <Text>Project Description: {data.description}</Text>
       <Flex>
-        {data.tech.map((tech) => {
+        {data.tech.map((tech, index) => {
           return (
-            <Box key={tech.name} m={5} p={2}>
-              <Text>Name: {tech.name}</Text>
-              <Text>Icon Link: {tech.name}</Text>
-            </Box>
+            <TechnologyBadge
+              key={`${data.title}_${tech.name}_${index}`}
+              tech={tech}
+            />
           );
         })}
       </Flex>
