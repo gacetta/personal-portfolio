@@ -27,6 +27,7 @@ import {
   SunIcon,
 } from "@chakra-ui/icons";
 import { Link, animateScroll } from "react-scroll";
+import theme from "../theme";
 
 interface Props {
   children: React.ReactNode;
@@ -83,6 +84,8 @@ export function NavBar() {
       top={0}
       left={0}
       zIndex={25}
+      backdropFilter={"auto"}
+      backdropBlur={"3px"}
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Box
@@ -98,26 +101,26 @@ export function NavBar() {
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
             <NavLink anchor="about">
-              <InfoIcon />
+              <InfoIcon mr={1} />
               About
             </NavLink>
             <NavLink anchor="resume">
-              <CalendarIcon />
+              <CalendarIcon mr={1} />
               Resume
             </NavLink>
             <NavLink anchor="projects">
-              <CopyIcon />
+              <CopyIcon mr={1} />
               Projects
             </NavLink>
             <NavLink anchor="contact">
-              <EmailIcon />
+              <EmailIcon mr={1} />
               Contact
             </NavLink>
             {/* <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button> */}
 
-            <Menu>
+            {/* <Menu>
               <MenuButton
                 as={Button}
                 rounded={"full"}
@@ -133,7 +136,7 @@ export function NavBar() {
                 <MenuItem>Projects</MenuItem>
                 <MenuItem>Contact</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
           </Stack>
         </Flex>
       </Flex>

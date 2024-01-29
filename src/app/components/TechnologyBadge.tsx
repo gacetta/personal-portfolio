@@ -1,7 +1,7 @@
 "use client";
 import { InfoIcon } from "@chakra-ui/icons";
 import { Flex, IconButton, Link, Text, Image } from "@chakra-ui/react";
-import { Technology } from "../utils/technologies";
+import { Technology } from "../constants/technologies";
 
 interface Props {
   children?: React.ReactNode;
@@ -19,20 +19,20 @@ export const TechnologyBadge = (props: Props) => {
       flex={"clamp(100%/6 + .1%, 10rem, 100%)"}
     >
       <Link
-        href={props.tech.href}
+        href={props.tech.HREF}
         isExternal={true}
         bg={"white"}
         rounded={"lg"}
         p={0.5}
         boxShadow={"lg"}
       >
-        {props.tech.logo ? (
+        {props.tech.LOGO ? (
           <Image
             boxSize={"3rem"}
             rounded={"md"}
             objectFit={"contain"}
-            src={props.tech.logo}
-            alt={props.tech.name}
+            src={props.tech.LOGO}
+            alt={props.tech.NAME}
           />
         ) : (
           <IconButton
@@ -40,13 +40,13 @@ export const TechnologyBadge = (props: Props) => {
             rounded={"md"}
             mx={".5rem"}
             colorScheme="gray"
-            aria-label={props.tech.name}
+            aria-label={props.tech.NAME}
             icon={<InfoIcon />}
           />
         )}
       </Link>
       <Text mt={0.5} fontSize={"l"}>
-        {props.tech.name}
+        {props.tech.NAME}
       </Text>
     </Flex>
   );

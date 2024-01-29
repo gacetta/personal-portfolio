@@ -1,7 +1,10 @@
 "use client";
 import { Box, Container, Flex, Image, Spacer, Text } from "@chakra-ui/react";
 import { TechnologyBadge } from "./TechnologyBadge";
-import { currentTechnologies, otherTechnologies } from "../utils/technologies";
+import {
+  currentTechnologies,
+  otherTechnologies,
+} from "../constants/technologies";
 import { Just_Another_Hand } from "next/font/google";
 import { SectionHeader } from "./SectionHeader";
 
@@ -57,7 +60,7 @@ export const About = () => {
           </Text>
           <Flex align={"center"} justify={"center"} wrap={"wrap"}>
             {currentTechnologies.map((tech, index) => {
-              return <TechnologyBadge key={`${index}_tech.name`} tech={tech} />;
+              return <TechnologyBadge key={`${index}_tech.NAME`} tech={tech} />;
             })}
           </Flex>
         </Box>
@@ -67,7 +70,7 @@ export const About = () => {
           </Text>
           <Flex align={"center"} justify={"center"} wrap={"wrap"}>
             {otherTechnologies.map((tech, index) => {
-              return <TechnologyBadge key={`${index}_tech.name`} tech={tech} />;
+              return <TechnologyBadge key={`${index}_tech.NAME`} tech={tech} />;
             })}
           </Flex>
         </Box>
