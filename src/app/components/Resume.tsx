@@ -6,7 +6,7 @@ import { ResumeDescription } from "./ResumeDescription";
 
 export const Resume = () => {
   return (
-    <Flex direction={"column"} w={"100%"} bg={"#faa006"} id="resume">
+    <Flex direction={"column"} w={"100%"} bg={"#faa006"} id="resume" p={10}>
       <SectionHeader>resume:</SectionHeader>
       <ResumeHeader>
         education

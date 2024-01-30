@@ -27,7 +27,6 @@ import {
   SunIcon,
 } from "@chakra-ui/icons";
 import { Link, animateScroll } from "react-scroll";
-import theme from "../theme";
 
 interface Props {
   children: React.ReactNode;

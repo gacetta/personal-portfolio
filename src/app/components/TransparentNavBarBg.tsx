@@ -3,7 +3,8 @@
 import { Box } from "@chakra-ui/react";
 import { NavBar } from "./NavBar";
 
-export const NavBarBg = () => {
+// No rgba() chakra support, so a hacky solution for now
+export const TransparentNavBarBg = () => {
   return (
     <Box
       bg={"white"}

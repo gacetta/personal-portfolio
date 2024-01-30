@@ -6,12 +6,12 @@ import { Resume } from "./components/Resume";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { NavBarBg } from "./components/NavBarBg";
+import { TransparentNavBarBg } from "./components/TransparentNavBarBg";
 
 export default function Home() {
   return (
     <main>
-      <NavBarBg />
+      <TransparentNavBarBg />
       <NavBar />
       <Hero />
       <About />
