@@ -3,7 +3,7 @@
 import { Flex } from "@chakra-ui/react";
 import { SectionHeader } from "./SectionHeader";
 import { ProjectItem } from "./ProjectItem";
-import { allTechnologies as tech } from "../utils/technologies";
+import { allTechnologies as TECH } from "../constants/technologies";
 
 const project1 = {
   title: "Rise Theatre",
@@ -12,11 +12,11 @@ const project1 = {
   description:
     "A searchable online directory of theatre and film professionals with 2500+ active, registered users",
   tech: [
-    tech.javascript,
-    tech.typescript,
-    tech.react,
-    tech.graphql,
-    tech.mongodb,
+    TECH.GRAPHQL,
+    TECH.JAVASCRIPT,
+    TECH.MONGODB,
+    TECH.REACT,
+    TECH.TYPESCRIPT,
   ],
 };
 const project2 = {
@@ -25,7 +25,7 @@ const project2 = {
   link: "https://www.graphql-oss.io/",
   description:
     "A comprehensive GraphQL development tool that integrates editor-based request testing with live and dynamic visualization",
-  tech: [tech.javascript, tech.react, tech.graphql, tech.sass],
+  tech: [TECH.JAVASCRIPT, TECH.REACT, TECH.GRAPHQL, TECH.SASS],
 };
 
 const projectList = [project1, project2];
