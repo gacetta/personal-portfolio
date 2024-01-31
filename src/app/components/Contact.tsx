@@ -1,8 +1,19 @@
 "use client";
 
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Icon,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
 import { SectionHeader } from "./SectionHeader";
-import { ContactInfo } from "./ContactInfo";
+import { EmailIcon, ExternalLinkIcon, PhoneIcon } from "@chakra-ui/icons";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export const Contact = () => {
   return (
@@ -12,7 +23,6 @@ export const Contact = () => {
       bg={"cornflowerblue"}
       id="contact"
       position={"relative"}
-      zIndex={-10}
       p={5}
       direction={"column"}
       align={"center"}
@@ -29,11 +39,56 @@ export const Contact = () => {
         right={9}
       /> */}
       <SectionHeader>contact:</SectionHeader>
-      <ContactInfo icon="email" data="michael.gacetta@gmail.com" />
-      <ContactInfo icon="phone" data="360.791.1333" />
-      <ContactInfo icon="linkedIn" data="@gacetta" />
-      <ContactInfo icon="gitHub" data="@gacetta" />
-      <ContactInfo icon="instagram" data="@gacetta" />
+      <List rounded={4} p={4} bg={"snow"} boxShadow={"dark-lg"}>
+        <ListItem>
+          <Link
+            href="mailto:michael.gacetta@gmail.com"
+            isExternal
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <EmailIcon mr={2} />
+            <Text>michael.gacetta@gmail.com</Text>
+          </Link>
+        </ListItem>
+        <ListItem display={"flex"} alignItems={"center"}>
+          <PhoneIcon mr={2} />
+          <Text>360.791.1333</Text>
+        </ListItem>
+        <ListItem>
+          <Link
+            href="https://github.com/gacetta"
+            isExternal
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <Icon as={FaGithub} mr={2} />
+            <Text>@gacetta</Text>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link
+            href="https://www.linkedin.com/in/gacetta/"
+            isExternal
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <Icon as={FaLinkedin} mr={2} />
+            <Text>@gacetta</Text>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link
+            href="https://www.instagram.com/gacetta"
+            isExternal
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <Icon as={FaInstagram} mr={2} />
+            <Text>@gacetta</Text>
+          </Link>
+        </ListItem>
+      </List>
     </Flex>
   );
 };
