@@ -2,7 +2,7 @@
 
 import { Box, Text, Flex } from "@chakra-ui/react";
 
-interface resumeItem {
+interface ResumeItemProps {
   title: string;
   position?: string;
   years?: string;
@@ -12,7 +12,7 @@ interface resumeItem {
 
 interface Props {
   children?: React.ReactNode;
-  data: resumeItem;
+  data: ResumeItemProps;
 }
 
 export const ResumeItem = (props: Props) => {
