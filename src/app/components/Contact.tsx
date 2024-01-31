@@ -24,15 +24,15 @@ import {
 export const Contact = () => {
   return (
     <Flex
-      w={"100%"}
-      h={"92vh"}
-      bg={"cornflowerblue"}
+      w="100%"
+      h="92vh"
+      bg="cornflowerblue"
       id="contact"
-      position={"relative"}
+      position="relative"
       p={5}
-      direction={"column"}
-      align={"center"}
-      justify={"center"}
+      direction="column"
+      align="center"
+      justify="center"
     >
       {/* <Image
         boxSize={"80%"}
@@ -45,19 +45,19 @@ export const Contact = () => {
         right={9}
       /> */}
       <SectionHeader>contact:</SectionHeader>
-      <List rounded={4} p={4} bg={"snow"} boxShadow={"dark-lg"}>
+      <List rounded={4} p={4} bg="snow" boxShadow="dark-lg">
         <ListItem>
           <Link
             href={GACETTA_MAILTO}
             isExternal
-            display={"flex"}
-            alignItems={"center"}
+            display="flex"
+            alignItems="center"
           >
             <EmailIcon mr={2} />
             <Text>michael.gacetta@gmail.com</Text>
           </Link>
         </ListItem>
-        <ListItem display={"flex"} alignItems={"center"}>
+        <ListItem display="flex" alignItems="center">
           <PhoneIcon mr={2} />
           <Text>360.791.1333</Text>
         </ListItem>
@@ -65,8 +65,8 @@ export const Contact = () => {
           <Link
             href={GACETTA_GITHUB}
             isExternal
-            display={"flex"}
-            alignItems={"center"}
+            display="flex"
+            alignItems="center"
           >
             <Icon as={FaGithub} mr={2} />
             <Text>@gacetta</Text>
@@ -76,8 +76,8 @@ export const Contact = () => {
           <Link
             href={GACETTA_LINKEDIN}
             isExternal
-            display={"flex"}
-            alignItems={"center"}
+            display="flex"
+            alignItems="center"
           >
             <Icon as={FaLinkedin} mr={2} />
             <Text>@gacetta</Text>
@@ -87,8 +87,8 @@ export const Contact = () => {
           <Link
             href={GACETTA_INSTAGRAM}
             isExternal
-            display={"flex"}
-            alignItems={"center"}
+            display="flex"
+            alignItems="center"
           >
             <Icon as={FaInstagram} mr={2} />
             <Text>@gacetta</Text>
