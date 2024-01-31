@@ -14,6 +14,12 @@ import NextLink from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { EmailIcon, ExternalLinkIcon, PhoneIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  GACETTA_GITHUB,
+  GACETTA_INSTAGRAM,
+  GACETTA_LINKEDIN,
+  GACETTA_MAILTO,
+} from "../constants/links";
 
 export const Contact = () => {
   return (
@@ -42,7 +48,7 @@ export const Contact = () => {
       <List rounded={4} p={4} bg={"snow"} boxShadow={"dark-lg"}>
         <ListItem>
           <Link
-            href="mailto:michael.gacetta@gmail.com"
+            href={GACETTA_MAILTO}
             isExternal
             display={"flex"}
             alignItems={"center"}
@@ -57,7 +63,7 @@ export const Contact = () => {
         </ListItem>
         <ListItem>
           <Link
-            href="https://github.com/gacetta"
+            href={GACETTA_GITHUB}
             isExternal
             display={"flex"}
             alignItems={"center"}
@@ -68,7 +74,7 @@ export const Contact = () => {
         </ListItem>
         <ListItem>
           <Link
-            href="https://www.linkedin.com/in/gacetta/"
+            href={GACETTA_LINKEDIN}
             isExternal
             display={"flex"}
             alignItems={"center"}
@@ -79,7 +85,7 @@ export const Contact = () => {
         </ListItem>
         <ListItem>
           <Link
-            href="https://www.instagram.com/gacetta"
+            href={GACETTA_INSTAGRAM}
             isExternal
             display={"flex"}
             alignItems={"center"}
