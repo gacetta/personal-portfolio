@@ -10,7 +10,16 @@ export const Footer = () => {
   };
 
   return (
-    <Flex h={"8vh"} w={"100%"} bg={"plum"} align={"center"} justify={"center"}>
+    <Flex
+      h={"8vh"}
+      w={"100%"}
+      bg={"plum"}
+      align={"center"}
+      justify={"center"}
+      position="absolute"
+      bottom={0}
+      left={0}
+    >
       <Box
         cursor={"pointer"}
         px={1}

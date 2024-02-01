@@ -1,9 +1,8 @@
 "use client";
 
-import { Flex } from "@chakra-ui/react";
-import { SectionHeader } from "./SectionHeader";
 import { ProjectItem } from "./ProjectItem";
 import { allTechnologies as TECH } from "../constants/technologies";
+import { PageSection } from "./PageSection";
 
 const project1 = {
   title: "Rise Theatre",
@@ -32,11 +31,10 @@ const projectList = [project1, project2];
 
 export const Projects = () => {
   return (
-    <Flex direction={"column"} w={"100%"} bg={"darkseagreen"} id="projects">
-      <SectionHeader>projects:</SectionHeader>
+    <PageSection title="projects" bg="darkseagreen">
       {projectList.map((project, index) => {
         return <ProjectItem data={project} key={`${project.title}_${index}`} />;
       })}
-    </Flex>
+    </PageSection>
   );
 };
