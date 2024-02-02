@@ -1,7 +1,7 @@
 "use client";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { Technology } from "../constants/technologies";
-import { TechnologyBadge } from "./TechnologyBadge";
+import { Technology } from "../../constants/technologies";
+import { TechnologyBadge } from "../TechnologyBadge";
 
 interface ProjectItemData {
   title: string;

@@ -1,9 +1,9 @@
 "use client";
 
-import { PageSection } from "./PageSection";
+import { PageSection } from "../PageSection";
 import { ResumeSection } from "./ResumeSection";
 import { ResumeItem } from "./ResumeItem";
-import * as resume from "../data/resumeData";
+import * as resume from "../../data/resumeData";
 
 export const Resume = () => {
   return (

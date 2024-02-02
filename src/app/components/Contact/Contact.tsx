@@ -18,8 +18,8 @@ import {
   GACETTA_INSTAGRAM,
   GACETTA_LINKEDIN,
   GACETTA_MAILTO,
-} from "../constants/links";
-import { PageSection } from "./PageSection";
+} from "../../constants/links";
+import { PageSection } from "../PageSection";
 
 export const Contact = () => {
   return (

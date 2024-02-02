@@ -1,12 +1,12 @@
 "use client";
 import { Box, Container, Flex, Image, Spacer, Text } from "@chakra-ui/react";
-import { TechnologyBadge } from "./TechnologyBadge";
+import { TechnologyBadge } from "../TechnologyBadge";
 import {
   currentTechnologies,
   otherTechnologies,
-} from "../constants/technologies";
+} from "../../constants/technologies";
 import { Just_Another_Hand } from "next/font/google";
-import { PageSection } from "./PageSection";
+import { PageSection } from "../PageSection";
 
 const codingDate = 2021;
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { ProjectItem } from "./ProjectItem";
-import { allTechnologies as TECH } from "../constants/technologies";
-import { PageSection } from "./PageSection";
+import { allTechnologies as TECH } from "../../constants/technologies";
+import { PageSection } from "../PageSection";
 
 const project1 = {
   title: "Rise Theatre",
