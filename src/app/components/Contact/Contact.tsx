@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Center,
   Flex,
   Icon,
   Image,
@@ -10,8 +11,6 @@ import {
   ListItem,
   Text,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { SectionHeader } from "./SectionHeader";
 import { EmailIcon, ExternalLinkIcon, PhoneIcon } from "@chakra-ui/icons";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
@@ -19,21 +18,12 @@ import {
   GACETTA_INSTAGRAM,
   GACETTA_LINKEDIN,
   GACETTA_MAILTO,
-} from "../constants/links";
+} from "../../constants/links";
+import { PageSection } from "../PageSection";
 
 export const Contact = () => {
   return (
-    <Flex
-      w="100%"
-      h="92vh"
-      bg="cornflowerblue"
-      id="contact"
-      position="relative"
-      p={5}
-      direction="column"
-      align="center"
-      justify="center"
-    >
+    <PageSection title="contact" bg="cornflowerblue" fullHeight center>
       {/* <Image
         boxSize={"80%"}
         objectFit={"contain"}
@@ -44,8 +34,7 @@ export const Contact = () => {
         top={10}
         right={9}
       /> */}
-      <SectionHeader>contact:</SectionHeader>
-      <List rounded={4} p={4} bg="snow" boxShadow="dark-lg">
+      <List rounded={4} p={4} bg="snow" boxShadow="dark-lg" mx="auto">
         <ListItem>
           <Link
             href={GACETTA_MAILTO}
@@ -95,6 +84,6 @@ export const Contact = () => {
           </Link>
         </ListItem>
       </List>
-    </Flex>
+    </PageSection>
   );
 };

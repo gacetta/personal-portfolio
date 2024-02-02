@@ -1,27 +1,19 @@
 "use client";
 import { Box, Container, Flex, Image, Spacer, Text } from "@chakra-ui/react";
-import { TechnologyBadge } from "./TechnologyBadge";
+import { TechnologyBadge } from "../TechnologyBadge";
 import {
   currentTechnologies,
   otherTechnologies,
-} from "../constants/technologies";
+} from "../../constants/technologies";
 import { Just_Another_Hand } from "next/font/google";
-import { SectionHeader } from "./SectionHeader";
+import { PageSection } from "../PageSection";
 
 const codingDate = 2021;
 
 export const About = () => {
   return (
-    <Flex
-      w={"100%"}
-      bg={"peru"}
-      direction={"column"}
-      justify={"center"}
-      id="about"
-      p={10}
-    >
+    <PageSection title="about" bg="peru">
       <Container maxW={"80rem"}>
-        <SectionHeader>about me:</SectionHeader>
         <Flex justify={"space-around"} m={4}>
           <Box maxW={"45%"}>
             <Image
@@ -75,6 +67,6 @@ export const About = () => {
           </Flex>
         </Box>
       </Container>
-    </Flex>
+    </PageSection>
   );
 };
